@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABBE42B3-B058-43DC-AC11-2269D85905CA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BackgroundTask</RootNamespace>
+    <AssemblyName>BackgroundTask</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data\Base_Area.cs" />
+    <Compile Include="data\Base_Authorize.cs" />
+    <Compile Include="data\Base_AuthorizeData.cs" />
+    <Compile Include="data\Base_CodeRule.cs" />
+    <Compile Include="data\Base_CodeRuleSeed.cs" />
+    <Compile Include="data\Base_DatabaseBackup.cs" />
+    <Compile Include="data\Base_DatabaseLink.cs" />
+    <Compile Include="data\Base_DataItem.cs" />
+    <Compile Include="data\Base_DataItemDetail.cs" />
+    <Compile Include="data\Base_Department.cs" />
+    <Compile Include="data\Base_FileFolder.cs" />
+    <Compile Include="data\Base_FileInfo.cs" />
+    <Compile Include="data\Base_FilterIP.cs" />
+    <Compile Include="data\Base_FilterTime.cs" />
+    <Compile Include="data\Base_Log.cs" />
+    <Compile Include="data\Base_Module.cs" />
+    <Compile Include="data\Base_ModuleButton.cs" />
+    <Compile Include="data\Base_ModuleColumn.cs" />
+    <Compile Include="data\Base_ModuleForm.cs" />
+    <Compile Include="data\Base_ModuleFormInstance.cs" />
+    <Compile Include="data\Base_News.cs" />
+    <Compile Include="data\Base_Organize.cs" />
+    <Compile Include="data\Base_Role.cs" />
+    <Compile Include="data\Base_Schedule.cs" />
+    <Compile Include="data\Base_User.cs" />
+    <Compile Include="data\Base_UserRelation.cs" />
+    <Compile Include="data\Client_CashBalance.cs" />
+    <Compile Include="data\Client_Chance.cs" />
+    <Compile Include="data\Client_Customer.cs" />
+    <Compile Include="data\Client_CustomerContact.cs" />
+    <Compile Include="data\Client_Expenses.cs" />
+    <Compile Include="data\Client_Invoice.cs" />
+    <Compile Include="data\Client_Order.cs" />
+    <Compile Include="data\Client_OrderEntry.cs" />
+    <Compile Include="data\Client_Receivable.cs" />
+    <Compile Include="data\Client_TrailRecord.cs" />
+    <Compile Include="data\CRM_CallLog.cs" />
+    <Compile Include="data\CRM_Customer.cs" />
+    <Compile Include="data\CRM_FollowUpRecords.cs" />
+    <Compile Include="data\CustomerLocation.cs" />
+    <Compile Include="data\Email_Addressee.cs" />
+    <Compile Include="data\Email_Category.cs" />
+    <Compile Include="data\Email_Content.cs" />
+    <Compile Include="data\HmkDBContext.cs" />
+    <Compile Include="data\IM_Content.cs" />
+    <Compile Include="data\IM_Group.cs" />
+    <Compile Include="data\IM_Read.cs" />
+    <Compile Include="data\IM_UserGroup.cs" />
+    <Compile Include="data\Rpt_Temp.cs" />
+    <Compile Include="data\SmsInfo.cs" />
+    <Compile Include="data\TelphoneCertification.cs" />
+    <Compile Include="data\TelphoneCertification0.cs" />
+    <Compile Include="data\TelphoneData.cs" />
+    <Compile Include="data\TelphoneLiang.cs" />
+    <Compile Include="data\TelphoneLiangBak721.cs" />
+    <Compile Include="data\TelphoneLiangJoin.cs" />
+    <Compile Include="data\TelphoneLiangOther.cs" />
+    <Compile Include="data\TelphoneLiangSee.cs" />
+    <Compile Include="data\TelphoneLiangShare.cs" />
+    <Compile Include="data\TelphoneLiangVip.cs" />
+    <Compile Include="data\TelphoneLiOrder.cs" />
+    <Compile Include="data\TelphoneOrder.cs" />
+    <Compile Include="data\TelphoneOrder0.cs" />
+    <Compile Include="data\TelphonePu.cs" />
+    <Compile Include="data\TelphoneReserver.cs" />
+    <Compile Include="data\TelphoneReserveSearch.cs" />
+    <Compile Include="data\TelphoneReserveSee.cs" />
+    <Compile Include="data\TelphoneSendout.cs" />
+    <Compile Include="data\TelphoneSource.cs" />
+    <Compile Include="data\TelphoneSource1.cs" />
+    <Compile Include="data\TelphoneSource_0.cs" />
+    <Compile Include="data\TelphoneSource_copy.cs" />
+    <Compile Include="data\TelphoneWash.cs" />
+    <Compile Include="data\TelphoneXi.cs" />
+    <Compile Include="data\TelphoneXiNo.cs" />
+    <Compile Include="data\TestFlow_LeaveSlip.cs" />
+    <Compile Include="data\WanHao.cs" />
+    <Compile Include="data\WanHao1.cs" />
+    <Compile Include="data\WeChat_App.cs" />
+    <Compile Include="data\WeChat_DeptRelation.cs" />
+    <Compile Include="data\WeChat_UserRelation.cs" />
+    <Compile Include="data\WeChat_Users.cs" />
+    <Compile Include="data\WF_DelegateRecord.cs" />
+    <Compile Include="data\WF_DelegateRule.cs" />
+    <Compile Include="data\WF_DelegateRuleSchemeInfo.cs" />
+    <Compile Include="data\WF_FrmMain.cs" />
+    <Compile Include="data\WF_ProcessInstance.cs" />
+    <Compile Include="data\WF_ProcessOperationHistory.cs" />
+    <Compile Include="data\WF_ProcessScheme.cs" />
+    <Compile Include="data\WF_ProcessTransitionHistory.cs" />
+    <Compile Include="data\WF_SchemeContent.cs" />
+    <Compile Include="data\WF_SchemeInfo.cs" />
+    <Compile Include="data\WF_SchemeInfoAuthorize.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestJob.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hsf.Redis\Hsf.Redis.csproj">
+      <Project>{71874639-7A73-41EC-83C8-1312B43172EE}</Project>
+      <Name>Hsf.Redis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
